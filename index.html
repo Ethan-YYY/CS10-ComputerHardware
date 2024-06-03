@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Hardware Components</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    .component {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    select {
+        padding: 5px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Computer Hardware Components</h1>
+</header>
+<div class="container">
+    <label for="category">Select a category:</label>
+    <select id="category">
+        <option value="all">All Components</option>
+        <option value="CPU">CPU</option>
+        <option value="GPU">GPU</option>
+        <option value="RAM">RAM</option>
+        <option value="Motherboard">Motherboard</option>
+        <option value="Storage">Storage</option>
+        <option value="PSU">PSU</option>
+    </select>
+    <div id="components"></div>
+</div>
+<script>
+    const components = [
+        {
+            name: 'CPU',
+            variants: [
+                { company: 'Intel', description: 'Intel Core i7', price: '$300' },
+                { company: 'AMD', description: 'AMD Ryzen 7', price: '$350' }
+            ]
+        },
+        {
+            name: 'GPU',
+            variants: [
+                { company: 'Nvidia', description: 'Nvidia GeForce RTX 3080', price: '$800' },
+                { company: 'AMD', description: 'AMD Radeon RX 6800 XT', price: '$700' }
+            ]
+        },
+        {
+            name: 'RAM',
+            variants: [
+                { company: 'Corsair', description: 'Corsair Vengeance LPX 16GB', price: '$100' },
+                { company: 'Kingston', description: 'Kingston HyperX Fury 16GB', price: '$90' }
+            ]
+        },
+        // Add more components and their variants as needed
+    ];
+
+    const componentsContainer = document.getElementById('components');
+    const categorySelect = document.getElementById('category');
+
+    function populateComponents(category) {
+        componentsContainer.innerHTML = '';
+        components.forEach(component => {
+            if (category === 'all' || component.name === category) {
+                component.variants.forEach(variant => {
+                    const componentElement = document.createElement('div');
+                    componentElement.classList.add('component');
+                    componentElement.innerHTML = `
+                        <h2>${component.name} - ${variant.company}</h2>
+                        <p><strong>Description:</strong> ${variant.description}</p>
+                        <p><strong>Price:</strong> ${variant.price}</p>
+                    `;
+                    componentsContainer.appendChild(componentElement);
+                });
+            }
+        });
+    }
+
+    categorySelect.addEventListener('change', () => {
+        const selectedCategory = categorySelect.value;
+        populateComponents(selectedCategory);
+    });
+
+    // Populate components initially with all components
+    populateComponents('all');
+</script>
+</body>
+</html>
