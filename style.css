@@ -1,26 +1,52 @@
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-    .container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 0 20px;
-    }
-    .component {
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    select {
-        padding: 5px;
-        font-size: 16px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #252424;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.dropdown {
+    margin-bottom: 20px;
+}
+
+#selected-components {
+    margin-bottom: 20px;
+}
+
+.component {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+#submit-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: #45a049;
+}

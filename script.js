@@ -1,55 +1,53 @@
-    const components = [
-        {
-            name: 'CPU',
-            variants: [
-                { company: 'Intel', description: 'Intel Core i7', price: '$300' },
-                { company: 'AMD', description: 'AMD Ryzen 7', price: '$350' },
-                { company: 'AMD', description: 'AMD Ryzen 9', price: '$500' },
-                { company: 'AMD', description: 'AMD Ryzen 5', price: '$200' },
-            ]
-        },
-        {
-            name: 'GPU',
-            variants: [
-                { company: 'Nvidia', description: 'Nvidia GeForce RTX 3080', price: '$800' },
-                { company: 'AMD', description: 'AMD Radeon RX 6800 XT', price: '$700' }
-            ]
-        },
-        {
-            name: 'RAM',
-            variants: [
-                { company: 'Corsair', description: 'Corsair Vengeance LPX 16GB', price: '$100' },
-                { company: 'Kingston', description: 'Kingston HyperX Fury 16GB', price: '$90' }
-            ]
-        },
-        // Add more components and their variants as needed
-    ];
+const components = {
+    CPU: { name: 'CPU', price: 0 },
+    GPU: { name: 'GPU', price: 0 },
+    RAM: { name: 'RAM', price: 0 },
+    Motherboard: { name: 'Motherboard', price: 0 },
+    Storage: { name: 'Storage', price: 0 },
+    PSU: { name: 'PSU', price: 0 }
+};
 
-    const componentsContainer = document.getElementById('components');
-    const categorySelect = document.getElementById('category');
+document.getElementById('component-select').addEventListener('change', function() {
+    const componentType = this.value;
+    if (componentType !== "0") {
+        const component = components[componentType];
+        const componentDiv = document.createElement('div');
+        componentDiv.className = 'component';
+        componentDiv.innerHTML = `
+            <h3>${component.name}</h3>
+            <input type="number" min="0" value="${component.price}" class="price-input">
+            <input type="file" accept="image/*" class="image-input">
+        `;
+        document.getElementById('selected-components').appendChild(componentDiv);
 
-    function populateComponents(category) {
-        componentsContainer.innerHTML = '';
-        components.forEach(component => {
-            if (category === 'all' || component.name === category) {
-                component.variants.forEach(variant => {
-                    const componentElement = document.createElement('div');
-                    componentElement.classList.add('component');
-                    componentElement.innerHTML = `
-                        <h2>${component.name} - ${variant.company}</h2>
-                        <p><strong>Description:</strong> ${variant.description}</p>
-                        <p><strong>Price:</strong> ${variant.price}</p>
-                    `;
-                    componentsContainer.appendChild(componentElement);
-                });
-            }
+        // Update price when input changes
+        componentDiv.querySelector('.price-input').addEventListener('input', function() {
+            component.price = parseInt(this.value) || 0;
+            updateTotalPrice();
+        });
+
+        // Update image when uploaded
+        componentDiv.querySelector('.image-input').addEventListener('change', function() {
+            const file = this.files[0];
+            const reader = new FileReader();
+            const imageElement = document.createElement('img');
+            reader.onload = function(event) {
+                imageElement.src = event.target.result;
+                imageElement.style.maxWidth = '100px';
+                imageElement.style.maxHeight = '100px';
+            };
+            reader.readAsDataURL(file);
+            componentDiv.appendChild(imageElement);
         });
     }
+});
 
-    categorySelect.addEventListener('change', () => {
-        const selectedCategory = categorySelect.value;
-        populateComponents(selectedCategory);
-    });
+document.getElementById('submit-btn').addEventListener('click', function() {
+    const totalPrice = Object.values(components).reduce((acc, curr) => acc + curr.price, 0);
+    alert(`Your PC build total price is: $${totalPrice}`);
+});
 
-    // Populate components initially with all components
-    populateComponents('all');
+function updateTotalPrice() {
+    const totalPrice = Object.values(components).reduce((acc, curr) => acc + curr.price, 0);
+    document.getElementById('total').textContent = totalPrice;
+}
