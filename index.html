@@ -7,26 +7,64 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>PC Builder</h1>
-    </header>
     <div class="container">
-        <h2>Select Components</h2>
-        <div class="dropdown">
-            <label for="component-select">Select Component:</label>
-            <select id="component-select">
-                <option value="0">Select...</option>
-                <option value="CPU">CPU</option>
-                <option value="GPU">GPU</option>
-                <option value="RAM">RAM</option>
-                <option value="Motherboard">Motherboard</option>
-                <option value="Storage">Storage</option>
-                <option value="PSU">PSU</option>
-            </select>
+        <h1>Build Your PC</h1>
+        <div class="builder">
+            <div class="selection">
+                <label for="cpu">CPU:</label>
+                <select id="cpu" class="dropdown" onchange="updateSelection('cpu')">
+                    <option value="" data-price="0" data-img="" data-link="">Select CPU</option>
+                    <option value="Intel Core i9" data-price="500" data-img="https://via.placeholder.com/100" data-link="https://example.com/cpu1">Intel Core i9 - $500</option>
+                    <option value="AMD Ryzen 9" data-price="450" data-img="https://via.placeholder.com/100" data-link="https://example.com/cpu2">AMD Ryzen 9 - $450</option>
+                </select>
+            </div>
+            <div class="selection">
+                <label for="gpu">GPU:</label>
+                <select id="gpu" class="dropdown" onchange="updateSelection('gpu')">
+                    <option value="" data-price="0" data-img="" data-link="">Select GPU</option>
+                    <option value="NVIDIA RTX 3080" data-price="700" data-img="https://via.placeholder.com/100" data-link="https://example.com/gpu1">NVIDIA RTX 3080 - $700</option>
+                    <option value="AMD Radeon RX 6800" data-price="600" data-img="https://via.placeholder.com/100" data-link="https://example.com/gpu2">AMD Radeon RX 6800 - $600</option>
+                </select>
+            </div>
+            <div class="selection">
+                <label for="ram">RAM:</label>
+                <select id="ram" class="dropdown" onchange="updateSelection('ram')">
+                    <option value="" data-price="0" data-img="" data-link="">Select RAM</option>
+                    <option value="16GB DDR4" data-price="80" data-img="https://via.placeholder.com/100" data-link="https://example.com/ram1">16GB DDR4 - $80</option>
+                    <option value="32GB DDR4" data-price="150" data-img="https://via.placeholder.com/100" data-link="https://example.com/ram2">32GB DDR4 - $150</option>
+                </select>
+            </div>
+            <div class="selection">
+                <label for="motherboard">Motherboard:</label>
+                <select id="motherboard" class="dropdown" onchange="updateSelection('motherboard')">
+                    <option value="" data-price="0" data-img="" data-link="">Select Motherboard</option>
+                    <option value="ASUS ROG" data-price="250" data-img="https://via.placeholder.com/100" data-link="https://example.com/motherboard1">ASUS ROG - $250</option>
+                    <option value="MSI MPG" data-price="200" data-img="https://via.placeholder.com/100" data-link="https://example.com/motherboard2">MSI MPG - $200</option>
+                </select>
+            </div>
+            <div class="selection">
+                <label for="storage">Storage:</label>
+                <select id="storage" class="dropdown" onchange="updateSelection('storage')">
+                    <option value="" data-price="0" data-img="" data-link="">Select Storage</option>
+                    <option value="Samsung 1TB SSD" data-price="150" data-img="https://via.placeholder.com/100" data-link="https://example.com/storage1">Samsung 1TB SSD - $150</option>
+                    <option value="WD 2TB HDD" data-price="100" data-img="https://via.placeholder.com/100" data-link="https://example.com/storage2">WD 2TB HDD - $100</option>
+                </select>
+            </div>
+            <div class="selection">
+                <label for="psu">Power Supply:</label>
+                <select id="psu" class="dropdown" onchange="updateSelection('psu')">
+                    <option value="" data-price="0" data-img="" data-link="">Select Power Supply</option>
+                    <option value="Corsair 750W" data-price="120" data-img="https://via.placeholder.com/100" data-link="https://example.com/psu1">Corsair 750W - $120</option>
+                    <option value="EVGA 650W" data-price="90" data-img="https://via.placeholder.com/100" data-link="https://example.com/psu2">EVGA 650W - $90</option>
+                </select>
+            </div>
         </div>
-        <div id="selected-components"></div>
-        <div id="total-price">Total Price: $<span id="total"></span></div>
-        <button id="submit-btn">Submit</button>
+        <div class="summary">
+            <h2>Summary</h2>
+            <div id="selectedComponents"></div>
+            <h3>Total: $<span id="totalPrice">0</span></h3>
+        </div>
+        <button onclick="submitBuild()">Submit</button>
     </div>
 
     <script src="script.js"></script>
