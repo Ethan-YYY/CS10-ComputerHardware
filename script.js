@@ -53,8 +53,7 @@ function submitBuild() {
                 <h3>${components[component].name}</h3>
                 <img src="${components[component].img}" alt="${components[component].name}">
                 <p>Price: $${components[component].price}</p>
-                <a href="${components[component].link}" target="_blank">Buy Now</a>
-            `;
+                <a href="${components[component].link}" target="_blank">Buy Now</a>`;
             selectedComponentsDiv.appendChild(div);
         }
     }
