@@ -4,7 +4,10 @@ const components = {
     ram: null,
     motherboard: null,
     storage: null,
-    psu: null
+    psu: null,
+    cooler: null,
+    case: null,
+    networkCard: null
 };
 
 function updateSelection(component) {
@@ -22,6 +25,7 @@ function updateSelection(component) {
     };
 
     updateSummary();
+    updateDescription(component);
 }
 
 function updateSummary() {
@@ -40,6 +44,19 @@ function updateSummary() {
     }
 
     document.getElementById('totalPrice').innerText = totalPrice;
+}
+
+function updateDescription(component) {
+    const componentData = components[component];
+    if (componentData) {
+        document.getElementById('componentImage').src = componentData.img;
+        document.getElementById('componentName').innerText = componentData.name;
+        document.getElementById('componentDescription').innerText = `Description of the ${componentData.name} goes here.`;
+    } else {
+        document.getElementById('componentImage').src = "https://via.placeholder.com/100";
+        document.getElementById('componentName').innerText = "Component Name";
+        document.getElementById('componentDescription').innerText = "Description of the selected component will be displayed here. This is just dummy text to show the placement of the description.";
+    }
 }
 
 function submitBuild() {

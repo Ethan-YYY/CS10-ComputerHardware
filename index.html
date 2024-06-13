@@ -58,13 +58,43 @@
                     <option value="EVGA 650W" data-price="90" data-img="https://via.placeholder.com/100" data-link="https://example.com/psu2">EVGA 650W - $90</option>
                 </select>
             </div>
+            <div class="selection">
+                <label for="cooler">Cooler:</label>
+                <select id="cooler" class="dropdown" onchange="updateSelection('cooler')">
+                    <option value="" data-price="0" data-img="" data-link="">Select Cooler</option>
+                    <option value="Cooler Master" data-price="50" data-img="https://via.placeholder.com/100" data-link="https://example.com/cooler1">Cooler Master - $50</option>
+                    <option value="Noctua NH-D15" data-price="90" data-img="https://via.placeholder.com/100" data-link="https://example.com/cooler2">Noctua NH-D15 - $90</option>
+                </select>
+            </div>
+            <div class="selection">
+                <label for="case">Case:</label>
+                <select id="case" class="dropdown" onchange="updateSelection('case')">
+                    <option value="" data-price="0" data-img="" data-link="">Select Case</option>
+                    <option value="NZXT H510" data-price="70" data-img="https://via.placeholder.com/100" data-link="https://example.com/case1">NZXT H510 - $70</option>
+                    <option value="Fractal Design Meshify C" data-price="100" data-img="https://via.placeholder.com/100" data-link="https://example.com/case2">Fractal Design Meshify C - $100</option>
+                </select>
+            </div>
+            <div class="selection">
+                <label for="networkCard">Network Card:</label>
+                <select id="networkCard" class="dropdown" onchange="updateSelection('networkCard')">
+                    <option value="" data-price="0" data-img="" data-link="">Select Network Card</option>
+                    <option value="TP-Link AC1300" data-price="30" data-img="https://via.placeholder.com/100" data-link="https://example.com/networkCard1">TP-Link AC1300 - $30</option>
+                    <option value="ASUS PCE-AC88" data-price="80" data-img="https://via.placeholder.com/100" data-link="https://example.com/networkCard2">ASUS PCE-AC88 - $80</option>
+                </select>
+            </div>
+        </div>
+        <div class="description-container">
+            <img id="componentImage" src="https://via.placeholder.com/100" alt="Component Image">
+            <div class="description">
+                <h2 id="componentName">Component Name</h2>
+                <p id="componentDescription">Description of the selected component will be displayed here. This is just dummy text to show the placement of the description.</p>
+            </div>
         </div>
         <div class="summary">
-            <h2>Summary</h2>
             <div id="selectedComponents"></div>
             <h3>Total: $<span id="totalPrice">0</span></h3>
+            <button onclick="submitBuild()">Submit</button>
         </div>
-        <button onclick="submitBuild()">Submit</button>
     </div>
 
     <script src="script.js"></script>
