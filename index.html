@@ -13,76 +13,108 @@
                 <label for="cpu">CPU:</label>
                 <select id="cpu" class="dropdown" onchange="updateSelection('cpu')">
                     <option value="" price="0" img="" link="">Select CPU</option>
-                    <option value="CPU TEMP" price="000" img="imgLink" link="https://example.com/cpu1">CPU TEMP - $000</option>
-                    <option value="CPU TEMP" price="000" img="imgLink" link="https://example.com/cpu1">CPU TEMP - $000</option>
-                    <option value="CPU TEMP" price="000" img="imgLink" link="https://example.com/cpu1">CPU TEMP - $000</option>
-                    <option value="CPU TEMP" price="000" img="imgLink" link="https://example.com/cpu1">CPU TEMP - $000</option>
-                    <option value="CPU TEMP" price="000" img="imgLink" link="https://example.com/cpu1">CPU TEMP - $000</option>
-                    <option value="CPU TEMP" price="000" img="imgLink" link="https://example.com/cpu1">CPU TEMP - $000</option>
+                    <option value="AMD Ryzen 5 5600X" price="299" img="https://i.ebayimg.com/images/g/NfUAAOSwcvFgDqx4/s-l1600.jpg" link="https://example.com/ryzen5600x">AMD Ryzen 5 5600X - $299</option>
+                    <option value="AMD Ryzen 7 5800X" price="449" img="imgLink3" link="https://example.com/ryzen5800x">AMD Ryzen 7 5800X - $449</option>
+                    <option value="AMD Ryzen 9 5900X" price="549" img="imgLink1" link="https://example.com/ryzen5900x">AMD Ryzen 9 5900X - $549</option>
+                    <option value="Intel Core i5-11600K" price="269" img="imgLink6" link="https://example.com/i511600k">Intel Core i5-11600K - $269</option>
+                    <option value="Intel Core i7-11700K" price="399" img="imgLink4" link="https://example.com/i711700k">Intel Core i7-11700K - $399</option>
+                    <option value="Intel Core i9-11900K" price="529" img="imgLink2" link="https://example.com/i911900k">Intel Core i9-11900K - $529</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="gpu">GPU:</label>
                 <select id="gpu" class="dropdown" onchange="updateSelection('gpu')">
                     <option value="" price="0" img="" link="">Select GPU</option>
-                    <option value="NVIDIA RTX 3080" price="700" img="imgLink" link="https://example.com/gpu1">NVIDIA RTX 3080 - $700</option>
-                    <option value="AMD Radeon RX 6800" price="600" img="imgLink" link="https://example.com/gpu2">AMD Radeon RX 6800 - $600</option>
+                    <option value="RTX 3080" price="799" img="imgLink1" link="https://example.com/rtx3080">RTX 3080 - $799</option>
+                    <option value="RTX 3070" price="499" img="imgLink4" link="https://example.com/rtx3070">RTX 3070 - $499</option>
+                    <option value="GTX 1050 Ti" price="149" img="imgLink5" link="https://example.com/gtx1050ti">GTX 1050 Ti - $149</option>
+                    <option value="GTX 1660 Ti" price="279" img="imgLink2" link="https://example.com/gtx1660ti">GTX 1660 Ti - $279</option>
+                    <option value="RX 6800 XT" price="999" img="imgLink3" link="https://example.com/rx6800xt">RX 6800 XT - $999</option>
+                    <option value="RX 6900 XT" price="1499" img="imgLink6" link="https://example.com/rx6900xt">RX 6900 XT - $1499</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="ram">RAM:</label>
                 <select id="ram" class="dropdown" onchange="updateSelection('ram')">
                     <option value="" price="0" img="" link="">Select RAM</option>
-                    <option value="16GB DDR4" price="80" img="imgLink" link="https://example.com/ram1">16GB DDR4 - $80</option>
-                    <option value="32GB DDR4" price="150" img="imgLink" link="https://example.com/ram2">32GB DDR4 - $150</option>
+                    <option value="Corsair Vengeance RGB Pro 16GB (2x8GB) DDR4-3200" price="129" img="imgLink1" link="https://example.com/corsair-vengeance-rgb-pro">Corsair Vengeance RGB Pro 16GB (2x8GB) DDR4-3200 - $129</option>
+                    <option value="Crucial Ballistix 16GB (2x8GB) DDR4-3600" price="119" img="imgLink2" link="https://example.com/crucial-ballistix">Crucial Ballistix 16GB (2x8GB) DDR4-3600 - $119</option>
+                    <option value="G.Skill Ripjaws V 32GB (2x16GB) DDR4-3200" price="179" img="imgLink3" link="https://example.com/gskill-ripjaws-v">G.Skill Ripjaws V 32GB (2x16GB) DDR4-3200 - $179</option>
+                    <option value="Kingston HyperX Fury RGB 16GB (2x8GB) DDR4-3200" price="139" img="imgLink4" link="https://example.com/kingston-hyperx-fury-rgb">Kingston HyperX Fury RGB 16GB (2x8GB) DDR4-3200 - $139</option>
+                    <option value="Team T-FORCE DARK Z 32GB (2x16GB) DDR4-3600" price="199" img="imgLink5" link="https://example.com/team-t-force-dark-z">Team T-FORCE DARK Z 32GB (2x16GB) DDR4-3600 - $199</option>
+                    <option value="Patriot Viper Steel Series 16GB (2x8GB) DDR4-3200" price="109" img="imgLink6" link="https://example.com/patriot-viper-steel">Patriot Viper Steel Series 16GB (2x8GB) DDR4-3200 - $109</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="motherboard">Motherboard:</label>
                 <select id="motherboard" class="dropdown" onchange="updateSelection('motherboard')">
                     <option value="" price="0" img="" link="">Select Motherboard</option>
-                    <option value="ASUS ROG" price="250" img="imgLink" link="https://example.com/motherboard1">ASUS ROG - $250</option>
-                    <option value="MSI MPG" price="200" img="imgLink" link="https://example.com/motherboard2">MSI MPG - $200</option>
+                    <option value="ASUS ROG Strix B550-F Gaming" price="189" img="imgLink1" link="https://example.com/asus-rog-strix-b550-f">ASUS ROG Strix B550-F Gaming - $189</option>
+                    <option value="Gigabyte B550 AORUS PRO AC" price="179" img="imgLink2" link="https://example.com/gigabyte-b550-aorus-pro-ac">Gigabyte B550 AORUS PRO AC - $179</option>
+                    <option value="MSI MPG B550 Gaming Plus" price="159" img="imgLink3" link="https://example.com/msi-mpg-b550-gaming-plus">MSI MPG B550 Gaming Plus - $159</option>
+                    <option value="ASRock B550 Steel Legend" price="149" img="imgLink4" link="https://example.com/asrock-b550-steel-legend">ASRock B550 Steel Legend - $149</option>
+                    <option value="ASUS TUF Gaming B550-PLUS" price="139" img="imgLink5" link="https://example.com/asus-tuf-gaming-b550-plus">ASUS TUF Gaming B550-PLUS - $139</option>
+                    <option value="Gigabyte B450M DS3H" price="79" img="imgLink6" link="https://example.com/gigabyte-b450m-ds3h">Gigabyte B450M DS3H - $79</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="storage">Storage:</label>
                 <select id="storage" class="dropdown" onchange="updateSelection('storage')">
                     <option value="" price="0" img="" link="">Select Storage</option>
-                    <option value="Samsung 1TB SSD" price="150" img="imgLink" link="https://example.com/storage1">Samsung 1TB SSD - $150</option>
-                    <option value="WD 2TB HDD" price="100" img="imgLink" link="https://example.com/storage2">WD 2TB HDD - $100</option>
+                    <option value="Samsung 970 EVO Plus 1TB NVMe SSD" price="199" img="imgLink1" link="https://example.com/samsung-970-evo-plus">Samsung 970 EVO Plus 1TB NVMe SSD - $199</option>
+                    <option value="WD Blue SN550 500GB NVMe SSD" price="79" img="imgLink2" link="https://example.com/wd-blue-sn550">WD Blue SN550 500GB NVMe SSD - $79</option>
+                    <option value="Crucial MX500 1TB SATA SSD" price="109" img="imgLink3" link="https://example.com/crucial-mx500">Crucial MX500 1TB SATA SSD - $109</option>
+                    <option value="Seagate Barracuda 2TB HDD" price="59" img="imgLink4" link="https://example.com/seagate-barracuda">Seagate Barracuda 2TB HDD - $59</option>
+                    <option value="Samsung 870 QVO 2TB SATA SSD" price="249" img="imgLink5" link="https://example.com/samsung-870-qvo">Samsung 870 QVO 2TB SATA SSD - $249</option>
+                    <option value="Intel 660p Series 1TB NVMe SSD" price="129" img="imgLink6" link="https://example.com/intel-660p">Intel 660p Series 1TB NVMe SSD - $129</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="psu">Power Supply:</label>
                 <select id="psu" class="dropdown" onchange="updateSelection('psu')">
                     <option value="" price="0" img="" link="">Select Power Supply</option>
-                    <option value="Corsair 750W" price="120" img="imgLink" link="https://example.com/psu1">Corsair 750W - $120</option>
-                    <option value="EVGA 650W" price="90" img="imgLink" link="https://example.com/psu2">EVGA 650W - $90</option>
+                    <option value="Corsair RM750x 750W 80+ Gold" price="129" img="imgLink1" link="https://example.com/corsair-rm750x">Corsair RM750x 750W 80+ Gold - $129</option>
+                    <option value="EVGA SuperNOVA 650 G5 650W 80+ Gold" price="119" img="imgLink2" link="https://example.com/evga-supernova-650-g5">EVGA SuperNOVA 650 G5 650W 80+ Gold - $119</option>
+                    <option value="Seasonic Focus GX-850 850W 80+ Gold" price="159" img="imgLink3" link="https://example.com/seasonic-focus-gx-850">Seasonic Focus GX-850 850W 80+ Gold - $159</option>
+                    <option value="Thermaltake Toughpower GF1 750W 80+ Gold" price="139" img="imgLink4" link="https://example.com/thermaltake-toughpower-gf1">Thermaltake Toughpower GF1 750W 80+ Gold - $139</option>
+                    <option value="NZXT C750 750W 80+ Gold" price="129" img="imgLink5" link="https://example.com/nzxt-c750">NZXT C750 750W 80+ Gold - $129</option>
+                    <option value="be quiet! Straight Power 11 650W 80+ Gold" price="149" img="imgLink6" link="https://example.com/be-quiet-straight-power-11">be quiet! Straight Power 11 650W 80+ Gold - $149</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="cooler">Cooler:</label>
                 <select id="cooler" class="dropdown" onchange="updateSelection('cooler')">
                     <option value="" price="0" img="" link="">Select Cooler</option>
-                    <option value="Cooler Master" price="50" img="imgLink" link="https://example.com/cooler1">Cooler Master - $50</option>
-                    <option value="Noctua NH-D15" price="90" img="imgLink" link="https://example.com/cooler2">Noctua NH-D15 - $90</option>
+                    <option value="Noctua NH-D15" price="99" img="imgLink1" link="https://example.com/noctua-nh-d15">Noctua NH-D15 - $99</option>
+                    <option value="Cooler Master Hyper 212 RGB Black Edition" price="49" img="imgLink2" link="https://example.com/cooler-master-hyper-212">Cooler Master Hyper 212 RGB Black Edition - $49</option>
+                    <option value="NZXT Kraken X63 280mm" price="149" img="imgLink3" link="https://example.com/nzxt-kraken-x63">NZXT Kraken X63 280mm - $149</option>
+                    <option value="Corsair H100i RGB Platinum SE 240mm" price="159" img="imgLink4" link="https://example.com/corsair-h100i-rgb-platinum-se">Corsair H100i RGB Platinum SE 240mm - $159</option>
+                    <option value="Arctic Liquid Freezer II 360" price="119" img="imgLink5" link="https://example.com/arctic-liquid-freezer-ii">Arctic Liquid Freezer II 360 - $119</option>
+                    <option value="be quiet! Dark Rock Pro 4" price="89" img="imgLink6" link="https://example.com/be-quiet-dark-rock-pro-4">be quiet! Dark Rock Pro 4 - $89</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="case">Case:</label>
                 <select id="case" class="dropdown" onchange="updateSelection('case')">
                     <option value="" price="0" img="" link="">Select Case</option>
-                    <option value="NZXT H510" price="70" img="imgLink" link="https://example.com/case1">NZXT H510 - $70</option>
-                    <option value="Fractal Design Meshify C" price="100" img="imgLink" link="https://example.com/case2">Fractal Design Meshify C - $100</option>
+                    <option value="NZXT H510i" price="99" img="imgLink13" link="https://example.com/nzxt-h510i">NZXT H510i - $99</option>
+                    <option value="Fractal Design Meshify C" price="89" img="imgLink14" link="https://example.com/fractal-design-meshify-c">Fractal Design Meshify C - $89</option>
+                    <option value="Corsair Crystal 570X RGB" price="179" img="imgLink15" link="https://example.com/corsair-crystal-570x-rgb">Corsair Crystal 570X RGB - $179</option>
+                    <option value="Phanteks Eclipse P400A" price="79" img="imgLink16" link="https://example.com/phanteks-eclipse-p400a">Phanteks Eclipse P400A - $79</option>
+                    <option value="Cooler Master MasterCase H500P Mesh" price="149" img="imgLink17" link="https://example.com/cooler-master-mastercase-h500p-mesh">Cooler Master MasterCase H500P Mesh - $149</option>
+                    <option value="Lian Li PC-O11 Dynamic" price="129" img="imgLink18" link="https://example.com/lian-li-pc-o11-dynamic">Lian Li PC-O11 Dynamic - $129</option>
                 </select>
             </div>
             <div class="selection">
                 <label for="networkCard">Network Card:</label>
                 <select id="networkCard" class="dropdown" onchange="updateSelection('networkCard')">
                     <option value="" price="0" img="" link="">Select Network Card</option>
-                    <option value="TP-Link AC1300" price="30" img="imgLink" link="https://example.com/networkCard1">TP-Link AC1300 - $30</option>
-                    <option value="ASUS PCE-AC88" price="80" img="imgLink" link="https://example.com/networkCard2">ASUS PCE-AC88 - $80</option>
+                    <option value="TP-Link Archer T9E AC1900" price="69" img="imgLink7" link="https://example.com/tp-link-archer-t9e">TP-Link Archer T9E AC1900 - $69</option>
+                    <option value="ASUS PCE-AC68 AC1900" price="79" img="imgLink8" link="https://example.com/asus-pce-ac68">ASUS PCE-AC68 AC1900 - $79</option>
+                    <option value="Gigabyte GC-WB867D-I AC1200" price="49" img="imgLink9" link="https://example.com/gigabyte-gc-wb867d-i">Gigabyte GC-WB867D-I AC1200 - $49</option>
+                    <option value="Intel Wi-Fi 6 AX200" price="29" img="imgLink10" link="https://example.com/intel-wifi-6-ax200">Intel Wi-Fi 6 AX200 - $29</option>
+                    <option value="Rosewill RNX-AC1900PCE AC1900" price="59" img="imgLink11" link="https://example.com/rosewill-rnx-ac1900pce">Rosewill RNX-AC1900PCE AC1900 - $59</option>
+                    <option value="D-Link DWA-192 AC1900" price="39" img="imgLink12" link="https://example.com/d-link-dwa-192">D-Link DWA-192 AC1900 - $39</option>
                 </select>
             </div>
         </div>

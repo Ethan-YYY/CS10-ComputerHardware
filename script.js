@@ -14,8 +14,8 @@ function updateSelection(component) {
     const dropdown = document.getElementById(component);
     const selectedOption = dropdown.options[dropdown.selectedIndex];
     const price = parseInt(selectedOption.getAttribute('price'));
-    const img = selectedOption.getAttribute('imgLink');
-    const link = selectedOption.getAttribute('buyLink');
+    const img = selectedOption.getAttribute('img');
+    const link = selectedOption.getAttribute('link');
 
     components[component] = {
         name: selectedOption.value,
