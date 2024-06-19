@@ -54,7 +54,7 @@ h1 {
     border-radius: 4px;
 }
 
-.description-container {
+.descriptionContainer {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
